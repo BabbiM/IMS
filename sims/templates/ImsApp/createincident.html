@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Semantic Incident Management System
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Semantic IMS</title>
+
+
+  	
+
+	<link rel="stylesheet" href="{% static 'music/animate.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/icomoon.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/themify-icons.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/bootstrap.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/magnific-popup.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/owl.carousel.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/owl.theme.default.min.css' %}"/>
+	<link rel="stylesheet" href="{% static 'music/style.css' %}"/>
+
+	</head>
+	<body>
+		
+	<div class="gtco-loader"></div>
+	
+	<div id="page">
+    <div id="clientd" stye=“margin-top: 50px;">
+				<p> &nbsp</p>
+				<p>&nbsp</p>
+				<p>&nbsp</p>
+	</div>
+	
+	<div class="page-inner">
+
+	<div id="head-top" style="position: absolute; width: 100%; top: 0; ">
+		<div class="gtco-top">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<div id="gtco-logo"><p>Semantic IMS </p></div>
+					</div>
+					<div id= "user-tools">
+						<ul class="gtco-social-top">
+							<li>Welcome, <strong>{{request.user.username}}</strong></li>
+            				<li><a href="login.html" >Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<nav class="gtco-nav sticky-banner" role="navigation">
+			<div class="gtco-container">
+				<div class="row">
+					<div class="col-xs-12 text-center menu-1">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li class="has-dropdown active">
+                                <a href="#">Incident</a>
+								<ul class="dropdown">
+									<li><a href="assignedincident.html">Assigned</a></li>
+									<li><a href="escalatedincident.html">Escalated</a></li>
+									<li><a href="closedincident.html">Closed</a></li>
+								</ul>
+                            </li>
+							<li class="has-dropdown">
+                                <a href="#">Ticket</a>
+								<ul class="dropdown">
+									<li><a href="createincident.html">Create</a></li>
+									<li><a href="sendincident.html">Send</a></li>
+                                </ul>
+                            </li>
+						</ul>
+					</div>
+
+				</div>
+            </div>
+			</nav>
+			
+			</div>
+				
+	</div>
+	<div id="clientd" style="position:  absolute; width: 10%; top: 20%; ">
+				<p> &nbsp</p>
+				<p>&nbsp</p>
+				<p>&nbsp</p>
+	</div>
+	<div>
+		<form id="ClientDetails" action="#">
+		<table align="center">
+            <caption> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>Clinet Details &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b> Incident Details &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b> Assignment Details </b> </caption>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Full Name: </td>
+					<td>
+					<input type="text" name="fullname">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Incident ID: </td>
+					<td>
+					<input type="text" name="incidentid">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Assigned Group: </td>
+					<td>
+					<select name="assignedgroup">
+						<option value=""disabled selected>-- select a group--</option>
+						<option value="Request">IT Support</option>
+						<option value="Process">Information Security</option>
+						<option value="Person">Network and Infrastructure</option>
+						<option value="Person">Datacenter Administration</option>
+						<option value="Person">RAD</option>
+						<option value="Person">System Administration</option>
+						<option value="Person">Data Management</option>
+						<option value="Person">Hardware Maintainance</option>
+						<option value="Person">Cloud Services</option>
+						<option value="Person">Asset Management</option>
+						<option value="Person">Mobilty</option>
+					</select>
+					</td>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> ID Number:	</td>
+					<td>
+					<input type="text" name="idnumber">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Summary: </td>
+					<td>
+					<textarea name="summary" width="20px" placeholder="Incident summary....."></textarea>
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Assigned Person: </td>
+					<td>
+					<select name="assignedperson">
+						<option value=""disabled selected>-- select a person--</option>
+						<option value="bisratbetru">Bisrat Mulugeta Betru</option>
+						<option value="tsegahunmamo">Tsegahun Mamo</option>
+						<option value="kidistkebebe">Kidist Kebebe Demissie</option>
+						<option value="sylvesterhakiza">Sylvester Hakiza</option>
+						<option value="emmanuelacuc">Emmanuel Acuc</option>
+						<option value="hailelulyilmamenkir">Hailelul Yilma Menkir</option>
+					</select>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>Department: </td>
+					<td><input type="text" name="department">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Tier1:</td>
+					<td>
+					<select name="tier1">
+						<option value=""disabled selected>-- select a tier--</option>
+						<option value="Asset">Asset</option>
+						<option value="Process">Process</option>
+						<option value="Person">Person</option>
+					</select>
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Contacted Vendor:</td>
+					<td>
+					<select name="tier1">
+						<option value=""disabled selected>-- select a vendor--</option>
+						<option value="microsoft">Microsoft</option>
+						<option value="cisco">CISCO</option>
+						<option value="Oracle">Oracle</option>
+						<option value="Oracle">VMWare</option>
+						<option value="Oracle">SAP</option>
+					</select>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>Country:</td>
+					<td><input type="text" name="country">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Tier2:</td>
+					<td>
+					<select name="tier2">
+						<option value=""disabled selected>-- select a relevant tier--</option>
+						<option value="Request">Request</option>
+						<option value="Process">Report</option>
+						<option value="Person">Cloud</option>
+						<option value="Person">Virtualization</option>
+						<option value="Person">Network</option>
+						<option value="Person">Collabration</option>
+						<option value="Person">System</option>
+						<option value="Person">Computer</option>
+						<option value="Person">Printer</option>
+						<option value="Person">Scanner</option>
+						<option value="Person">IP Phone</option>
+					</select>
+					</td>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> City:</td>
+					<td><input type="text" name="city">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Tier3:</td>
+					<td>
+					<select name="tier2">
+						<option value=""disabled selected>-- select a relevant tier--</option>
+						<option value="Request">Lenovo T460 Laptop</option>
+						<option value="Process">HP Laserjet 9050 Printer</option>
+						<option value="Person">Microsoft Office Outlook</option>
+						<option value="Person">CISCO Jabber</option>
+						<option value="Person">CISCO IP Phone</option>
+						<option value="Person">Microsoft OneDrive</option>
+					</select>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>Region:</td>
+					<td><input type="text" name="region">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> change:</td>
+					<td>
+					<input type="text" name="change">
+					</td>
+					</tr>
+					<tr>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Room Number: </td>
+					<td><input type="text" name="roomnumber">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td> Problem:</td>
+					<td><input type="text" name="problem">
+					<td>
+					</tr>
+					<tr>
+					<td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>
+					<td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>
+					<td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>
+					</tr>
+					<tr>
+					<td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>
+					<input type="button" name="assing" value="Assign" align="right" class="btn btn-primary">
+					</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+					<td>
+					<input type="button" name="reset" value="Reset" class="btn btn-primary">
+					</td>
+					</tr>
+		</table>
+		</table>
+		</form>
+	</div>	
+	</div>	
+	<!-- jQuery -->
+	<script src="{% static 'music/jquery.min.js' %}"></script>
+
+	<script src="{% static 'music/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'music/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'music/jquery.waypoints.min.js' %}"></script>
+	<script src="{%  static 'music/sticky.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'music/owl.carousel.min.js' %}"></script>
+		<!-- Main -->
+	<script src="{% static 'music/main.js' %}"></script>
+	<!-- Modernizr JS -->
+
+	</body>
+</html>
+

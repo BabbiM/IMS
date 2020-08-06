@@ -1,0 +1,22 @@
+OneDrive Service has Cloud incident
+HP 9050 Printer has Printing Incident
+Laptop not booting Device has Device Incident
+Laptop Keyboard has Device Incident
+Outlook Email has Outlook Email incident
+Webex Collabration has Collabration incident
+OneDrive is assined for Cloud Services IT
+Scum email has Email Incident
+Scum is a threat
+Intranet has unable to access Intranet Service Incident
+Intranet is internet
+Internet is Internet
+Scum is an impact
+Scum has a priority
+Aychew Intenal Client has Intranet Access
+Accoutn Request is a Client_side Process
+Priority is a factor
+Device is a root cause
+Tool is a root cause
+Collabration is a root cause
+Lapotp Computer is a Device
+Melese is an individual Owner of laptop
